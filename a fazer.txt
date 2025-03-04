@@ -1,0 +1,62 @@
+PERSONAGEM
+nome
+raca
+vida
+classe
+habilidades
+armadura
+
+PLAYER (sub personagem)
+mochila
+nivel
+
+INIMIGO (sub personagem)
+loot
+
+---------------------------
+
+HABILIDADE
+
+----------------------------
+
+
+ITEM
+nome
+raridade
+
+ARMAS (sub item)
+dano
+
+CONSUMIVEL (sub item)
+cura
+
+TESOURO (sub item)
+valor
+
+ARMADURA (sub item)
+ponto defesa
+
+MOCHILA
+
+----------------------------
+
+FASE
+String nome
+int dificuldade [1/4]
+
+----------------------------
+
+MISSÃO
+nome
+descricao
+status (concluida/andamento)
+recompensa
+
+----------------------------
+
+COMBATE (player, inimigo)
+
+funcao de batalha
+
+----------------------------
+

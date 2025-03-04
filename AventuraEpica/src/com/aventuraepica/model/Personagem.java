@@ -9,6 +9,8 @@ public class Personagem {
     private String classe;
     private List<Habilidade> habilidades = new ArrayList<>();
     private int vida;
+    // private Armadura armadura;
+
 
     // CONSTRUTURORES
 
@@ -66,5 +68,7 @@ public class Personagem {
         this.habilidades = habilidades;
     }
 
-    public void NovaHabilidade(String nome)
+    public void NovaHabilidade(String nome) {
+
+    }
 }
