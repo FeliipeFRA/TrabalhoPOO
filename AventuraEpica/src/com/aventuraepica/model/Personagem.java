@@ -68,7 +68,7 @@ public class Personagem {
         this.habilidades = habilidades;
     }
 
-    public void NovaHabilidade(String nome) {
-
+    public void NovaHabilidade(Habilidade nova_Hab) {
+        habilidades.add(hab);
     }
 }
