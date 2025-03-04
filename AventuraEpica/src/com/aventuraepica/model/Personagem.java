@@ -47,7 +47,7 @@ public class Personagem {
     public void setVida(int vida) {
         this.vida = vida;
     }
-
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
