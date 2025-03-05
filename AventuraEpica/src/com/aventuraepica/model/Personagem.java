@@ -14,9 +14,10 @@ public class Personagem {
 
     // CONSTRUTURORES
 
-    public Personagem(String novo_Nome, String novo_Raca, int novo_Vida) {
+    public Personagem(String novo_Nome, String novo_Raca, String novo_Classe, int novo_Vida) {
         nome = novo_Nome;
         raca = novo_Raca;
+        classe = novo_Classe;
         vida = novo_Vida;
     }
 
@@ -24,6 +25,7 @@ public class Personagem {
         nome = "?";
         raca = "?";
         classe = "?";
+        vida = 10;
     }
   
     // GETTERS AND SETTERS
@@ -61,6 +63,13 @@ public class Personagem {
     }
 
     public List<Habilidade> getHabilidades() {
+        Habilidade soco = new Habilidade("Soco", "soca", 5, 0);
+        Habilidade chute = new Habilidade("Chute", "chuta", 7, 0);
+        Habilidade descansar = new Habilidade("Descansar", "descansa", 0, 2);
+
+        this.NovaHabilidade(soco);
+        this.NovaHabilidade(chute);
+        this.NovaHabilidade(descansar);
         return habilidades;
     }
 
@@ -68,7 +77,7 @@ public class Personagem {
         this.habilidades = habilidades;
     }
 
-    public void NovaHabilidade(String nome) {
-
+    public void NovaHabilidade(Habilidade nova_Hab) {
+        habilidades.add(nova_Hab);
     }
 }
