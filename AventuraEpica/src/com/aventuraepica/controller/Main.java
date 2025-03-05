@@ -114,7 +114,26 @@ public class Main {
             System.out.println("\n--------------------------------\n");
 
             // INIMIGO
+            Inimigo i1 = new Inimigo("Starchy Zumbi", "Doce Zumbi", "Corpo a Corpo", 15);
+            Inimigo i2 = new Inimigo("O Lich", "Entidade Cosmica", "Magia Elemental", 300);
 
+            System.out.println("\n--------------------------------\n");
+            System.out.println("\nHABILIDADES DE " + i1.getNome() + "\n");
+
+            // HABILIDADES DO STARCHY ZUMBI
+            for (Habilidade habilidade : i1.getHabilidades()) {
+                System.out.println(habilidade); // O método toString() será chamado automaticamente
+            }
+            System.out.println("\n--------------------------------\n");
+
+            // HABILIDADES DO LICH
+            System.out.println("\n--------------------------------\n");
+            System.out.println("\nHABILIDADES DE " + i2.getNome() + "\n");
+
+            for (Habilidade habilidade : i2.getHabilidades()) {
+                System.out.println(habilidade); // O método toString() será chamado automaticamente
+            }
+            System.out.println("\n--------------------------------\n");
 
             // FIM DO "JOGO"
             scanner.close(); // FECHA SESSAO DE LEITURA
