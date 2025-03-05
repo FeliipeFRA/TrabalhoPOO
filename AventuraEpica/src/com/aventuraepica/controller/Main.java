@@ -1,8 +1,6 @@
 package com.aventuraepica.controller;
 
 import com.aventuraepica.model.Habilidade;
-import com.aventuraepica.model.Personagem;
-
 import com.aventuraepica.model.Item;
 import java.util.Scanner; // ler dados usuario
 import com.aventuraepica.model.Player;
@@ -102,42 +100,41 @@ public class Main {
             System.out.println("Raça: " + p.getRaca());
             System.out.println("Classe: " + p.getClasse());
             System.out.println("Nivel: " + p.getNivel());
-            System.out.print("\nArma: " + arma.getNome());
-        System.out.print("\nRaridade da arma: " + arma.getRaridade());
+            System.out.print("Arma: " + arma.getNome());
+            System.out.print("Raridade da arma: " + arma.getRaridade());
             System.out.println("\n--------------------------------\n");
 
             // HABILIDADES
             
 
-            System.out.println("\n--------------------------------\n");
-            System.out.println("\nHABILIDADES DE " + p.getNome() + "\n");
+            System.out.println("\n--------------------------------");
+            System.out.println("HABILIDADES DE " + p.getNome() + "\n");
 
             for (Habilidade habilidade : p.getHabilidades()) {
                 System.out.println(habilidade); // O método toString() será chamado automaticamente
             }
-            System.out.println("\n--------------------------------\n");
+            System.out.println("--------------------------------");
 
             // INIMIGO
             Inimigo i1 = new Inimigo("Starchy Zumbi", "Doce Zumbi", "Corpo a Corpo", 15);
             Inimigo i2 = new Inimigo("O Lich", "Entidade Cosmica", "Magia Elemental", 300);
 
-            System.out.println("\n--------------------------------\n");
-            System.out.println("\nHABILIDADES DE " + i1.getNome() + "\n");
+            System.out.println("\n--------------------------------");
+            System.out.println("HABILIDADES DE " + i1.getNome() + "\n");
 
             // HABILIDADES DO STARCHY ZUMBI
             for (Habilidade habilidade : i1.getHabilidades()) {
                 System.out.println(habilidade); // O método toString() será chamado automaticamente
             }
-            System.out.println("\n--------------------------------\n");
 
             // HABILIDADES DO LICH
-            System.out.println("\n--------------------------------\n");
+            System.out.println("--------------------------------");
             System.out.println("\nHABILIDADES DE " + i2.getNome() + "\n");
 
             for (Habilidade habilidade : i2.getHabilidades()) {
                 System.out.println(habilidade); // O método toString() será chamado automaticamente
             }
-            System.out.println("\n--------------------------------\n");
+            System.out.println("--------------------------------\n");
 
             // FIM DO "JOGO"
             scanner.close(); // FECHA SESSAO DE LEITURA
