@@ -1,8 +1,5 @@
 package com.aventuraepica.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Item {
     protected String nome;
     protected String raridade;
@@ -25,18 +22,3 @@ public class Item {
         return raridade;
     }
 }
-
-// Subclassse Arma
-class Arma extends Item {
-    private int dano;
-
-    public Arma(String nome, String raridade, int dano) {
-        super(nome, raridade);
-        this.dano = dano;
-    }
-
-    public int getDano() {
-        return dano;
-    }
-}
-
