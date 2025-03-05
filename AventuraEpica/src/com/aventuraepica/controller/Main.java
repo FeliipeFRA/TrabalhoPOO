@@ -2,18 +2,20 @@ package com.aventuraepica.controller;
 
 import com.aventuraepica.model.Habilidade;
 import com.aventuraepica.model.Personagem;
+
+import com.aventuraepica.model.Item;
+import java.util.Scanner; // ler dados usuario
 import com.aventuraepica.model.Player;
 import com.aventuraepica.model.Inimigo;
-import java.util.Scanner; // ler dados usuario
-
 
 public class Main {
     public static void main(String[] args) throws Exception {
         Player p = new Player();
         Boolean jogando = true;
+        Item arma = new Item("Espada do Finn", "Rara");
 
         Scanner scanner = new Scanner(System.in); // ABRE SESSAO DE LEITURA
-       
+
         System.out.println("\n--------------------------------\n");
         System.out.println("AVENTURA EPICA\n");
 
@@ -100,6 +102,8 @@ public class Main {
             System.out.println("Raça: " + p.getRaca());
             System.out.println("Classe: " + p.getClasse());
             System.out.println("Nivel: " + p.getNivel());
+            System.out.print("\nArma: " + arma.getNome());
+        System.out.print("\nRaridade da arma: " + arma.getRaridade());
             System.out.println("\n--------------------------------\n");
 
             // HABILIDADES
