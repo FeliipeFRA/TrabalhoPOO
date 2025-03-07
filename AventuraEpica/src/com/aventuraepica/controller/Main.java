@@ -15,7 +15,6 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Player p = new Player();
         Boolean jogando = true;
-        Item arma = new Item("Espada do Finn", "Rara");
 
         Scanner scanner = new Scanner(System.in); // ABRE SESSAO DE LEITURA
 

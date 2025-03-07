@@ -11,14 +11,16 @@ public class Player extends Personagem {
     public Player(String nome, String raca, String classe){
         super(nome, raca, classe, 20); // Chama o construtor da superclasse (Personagem)
         nivel = 1;
-        mochila = new Mochila();
+        mochila = new Mochila(10);
         
     }
 
     public Player(){
+        super("?", "?", "?", 20);
         nivel = 1;
-        mochila = new Mochila();
+        mochila = new Mochila(10);
     }
+    
 
     public int getNivel() {
         return nivel;
@@ -35,4 +37,31 @@ public class Player extends Personagem {
     public void setMochila(Mochila nova_mochila) {
         this.mochila = nova_mochila;
     }
+
+    private int xp = 0;
+    private int xpNecessario = 100;
+
+    public void aumentarXP(int quantidade) {
+        xp += quantidade;
+        System.out.println(getNome() + " ganhou " + quantidade + " XP! XP atual: " + xp + "/" + xpNecessario);
+    if (xp >= xpNecessario) {
+        subirDeNivel();
+    }
+    }
+
+    private void subirDeNivel() {
+    nivel++;
+    xp -= xpNecessario;
+    xpNecessario *= 1.5;
+    setVida(getVida() + 5);
+    System.out.println("🎉 " + getNome() + " subiu para o nível " + nivel + "! Vida aumentada para " +  getVida());
+    }
+
+    private int moedas = 0;
+
+    public void aumentarMoedas(int quantidade) {
+        moedas += quantidade;
+        System.out.println("Agora você tem " + moedas + " moedas.");
+    }
+
 }

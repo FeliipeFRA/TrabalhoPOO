@@ -15,4 +15,10 @@ class Tesouro extends Item {
     public int getValor() {
         return valor;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Valor: " + valor + " moedas de ouro";
+}
+
 }
