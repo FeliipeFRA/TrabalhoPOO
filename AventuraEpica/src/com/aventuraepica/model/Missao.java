@@ -43,8 +43,8 @@ public class Missao {
 
     @Override
     public String toString() {
-        return "Missão: " + nome + "\nDescrição: " + descricao +
+        return "Missão: " + nome + "\nDescricao: " + descricao +
                "\nRecompensa: " + recompensaXP + " de XP, " +
-               "\nStatus: " + (concluida ? "Concluída" : "Em andamento");
+               "\nStatus: " + (concluida ? "Concluida" : "Em andamento");
     }
 }

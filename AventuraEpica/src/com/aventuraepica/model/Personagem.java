@@ -66,6 +66,7 @@ public class Personagem {
     }
 
     public List<Habilidade> getHabilidades() {
+        // HABILIDADES PADRÃO DE TODA ENTIDADE
         Habilidade soco = new Habilidade("Soco", "soca", 5, 0);
         Habilidade chute = new Habilidade("Chute", "chuta", 7, 0);
         Habilidade descansar = new Habilidade("Descansar", "descansa", 0, 2);
@@ -82,5 +83,14 @@ public class Personagem {
 
     public void NovaHabilidade(Habilidade nova_Hab) {
         habilidades.add(nova_Hab);
+    }
+
+    public void tomarDano(String agressor, int dano_tomado){
+        int vida = getVida() - dano_tomado;
+        if (vida < 0) {
+            vida = 0;
+        }
+        setVida(vida);
+        System.out.println(getNome() + " foi atacado por " + agressor + " e tomou " + dano_tomado + " de dano! Vida restante: " + vida);
     }
 }

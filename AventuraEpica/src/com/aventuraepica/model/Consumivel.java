@@ -4,7 +4,7 @@
 
 package com.aventuraepica.model;
 
-class Consumivel extends Item {
+public class Consumivel extends Item {
     private int cura;
 
     public Consumivel(String nome, String raridade, int cura) {

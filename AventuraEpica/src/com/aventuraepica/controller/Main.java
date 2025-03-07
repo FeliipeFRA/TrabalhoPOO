@@ -15,6 +15,7 @@ import com.aventuraepica.model.Player;
 import com.aventuraepica.model.Inimigo;
 import com.aventuraepica.model.Arma;
 import com.aventuraepica.model.Armadura;
+import com.aventuraepica.model.Fase;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -171,6 +172,21 @@ public class Main {
             }
             System.out.println("--------------------------------\n");
 
+            // FASE
+            Fase f1 = new Fase("Reino Doce", 1);
+            System.out.println("- FASE: " + f1.getNome() +"\n- DIFICULDADE: " + f1.getDificuldade() + "\n");
+            System.out.println("--------------------------------\n");
+            Fase f2 = new Fase("Reino Gelado", 3);
+            System.out.println("- FASE: " + f2.getNome() +"\n- DIFICULDADE: " + f2.getDificuldade() + "\n");
+            System.out.println("--------------------------------\n");
+            // SIMULAÇÃO DE COMBATE
+
+            System.out.println("SIMULACAO DE COMBATE\n");
+            p.tomarDano(i2.getNome(), 10);
+            i2.tomarDano(p.getNome(), arma_atual.getDano());
+
+            System.out.println("--------------------------------\n");
+            System.out.println("\n\n");
             // FIM DO "JOGO"
             scanner.close(); // FECHA SESSAO DE LEITURA
             jogando = false;
