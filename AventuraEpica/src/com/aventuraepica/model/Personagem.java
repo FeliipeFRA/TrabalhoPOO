@@ -13,7 +13,6 @@ public class Personagem {
     private String classe;
     private List<Habilidade> habilidades = new ArrayList<>();
     private int vida;
-    // private Armadura armadura;
 
 
     // CONSTRUTURORES

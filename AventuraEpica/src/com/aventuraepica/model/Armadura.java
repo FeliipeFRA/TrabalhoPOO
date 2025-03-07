@@ -12,6 +12,10 @@ public class Armadura extends Item {
         return defesa;
     }
 
+    public void setDefesa(int nova_Defesa) {
+        this.defesa = nova_Defesa;
+    }
+
     @Override
     public String toString() {
         return super.toString() + " | Defesa: " + defesa;

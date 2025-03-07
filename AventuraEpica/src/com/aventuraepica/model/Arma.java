@@ -4,8 +4,13 @@
 
 package com.aventuraepica.model;
 
-class Arma extends Item {
+public class Arma extends Item {
     private int dano;
+
+    public Arma() {
+        super("?", "?");
+        this.dano = 0;
+    }
 
     public Arma(String nome, String raridade, int dano) {
         super(nome, raridade);
@@ -15,4 +20,7 @@ class Arma extends Item {
     public int getDano() {
         return dano;
     }
+
+
+
 }

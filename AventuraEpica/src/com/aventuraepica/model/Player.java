@@ -4,25 +4,40 @@
 
 package com.aventuraepica.model;
 
+import com.aventuraepica.model.Armadura;
+
 public class Player extends Personagem {
     private int nivel;
     private Mochila mochila;
     private int xp = 0;
     private int xpNecessario = 100;
+    private Armadura armadura_player;
 
     public Player(String nome, String raca, String classe){
         super(nome, raca, classe, 20); // Chama o construtor da superclasse (Personagem)
         nivel = 1;
         mochila = new Mochila(10);
-        
+        armadura_player = new Armadura("?", "?", 0);
     }
 
     public Player(){
         super("?", "?", "?", 20);
         nivel = 1;
         mochila = new Mochila(10);
+        armadura_player = new Armadura("?", "?", 0);
     }
     
+    public int getDefesa() {
+        return armadura_player.getDefesa();
+    }
+
+    public Armadura getArmadura() {
+        return armadura_player;
+    }
+
+    public void setArmadura(Armadura nova_Armadura) {
+        this.armadura_player = nova_Armadura;
+    }
 
     public int getNivel() {
         return nivel;
@@ -39,8 +54,8 @@ public class Player extends Personagem {
     public void setMochila(Mochila nova_mochila) {
         this.mochila = nova_mochila;
     }
-
    
+
 
     public void aumentarXP(int quantidade) {
         xp += quantidade;
