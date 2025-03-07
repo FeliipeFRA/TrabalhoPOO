@@ -7,6 +7,8 @@ package com.aventuraepica.model;
 public class Player extends Personagem {
     private int nivel;
     private Mochila mochila;
+    private int xp = 0;
+    private int xpNecessario = 100;
 
     public Player(String nome, String raca, String classe){
         super(nome, raca, classe, 20); // Chama o construtor da superclasse (Personagem)
@@ -38,8 +40,7 @@ public class Player extends Personagem {
         this.mochila = nova_mochila;
     }
 
-    private int xp = 0;
-    private int xpNecessario = 100;
+   
 
     public void aumentarXP(int quantidade) {
         xp += quantidade;
