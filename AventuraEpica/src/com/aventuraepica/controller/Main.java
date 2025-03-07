@@ -2,6 +2,8 @@
 // FELIPE FERREIRA RANGEL DE ALMEIDA - 2208490
 // IGOR LUIS DIAS - 2199713
 
+// MAIN CLASS APENAS PARA TESTE DAS CLASSES E SUAS IMPLEMENTAÇÕES
+
 package com.aventuraepica.controller;
 
 import java.util.Scanner; // ler dados usuario
@@ -12,6 +14,7 @@ import com.aventuraepica.model.Inimigo;
 import com.aventuraepica.model.Player;
 import com.aventuraepica.model.Inimigo;
 import com.aventuraepica.model.Arma;
+import com.aventuraepica.model.Armadura;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -21,7 +24,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in); // ABRE SESSAO DE LEITURA
 
         System.out.println("\n\n\n\n");
-        System.out.println("--------------------------------\n");
+        System.out.println("--------------------------------");
         System.out.println("AVENTURA EPICA\n");
 
         while (jogando) {
@@ -37,13 +40,13 @@ public class Main {
             
             switch (escolha) {
                 case 1:
-                    System.out.println("Você escolheu jogar como Jake!\n");
+                    System.out.println("Você escolheu jogar como Jake!");
                     p.setNome("Jake");
                     p.setRaca("Cachorro");
                     p.setClasse("Corpo a Corpo");
                     break;
                 case 2:
-                    System.out.println("Você escolheu jogar como Finn!\n");
+                    System.out.println("Você escolheu jogar como Finn!");
                     p.setNome("Finn");
                     p.setRaca("Humano");
                     p.setClasse("Guerreiro Espadachim");
@@ -104,19 +107,18 @@ public class Main {
 
             // PERSONAGEM
 
-            System.out.println("\n--------------------------------\n");
+            System.out.println("\n--------------------------------");
             System.out.println("SEU PERSONAGEM:");
             System.out.println("Nome: " + p.getNome());
             System.out.println("Raça: " + p.getRaca());
             System.out.println("Classe: " + p.getClasse());
             System.out.println("Nivel: " + p.getNivel());
-            
-            System.out.println("\n--------------------------------\n");
+            System.out.println("--------------------------------\n");
 
 
             // HABILIDADES
             
-            System.out.println("\n--------------------------------");
+            System.out.println("--------------------------------");
             System.out.println("HABILIDADES DE " + p.getNome() + "\n");
 
             for (Habilidade habilidade : p.getHabilidades()) {
@@ -132,6 +134,17 @@ public class Main {
             System.out.println("--------------------------------");
 
             // ARMADURA PLAYER
+        
+            System.out.println("\n--------------------------------");
+            System.out.println(p.getArmadura());
+            System.out.println("--------------------------------");
+
+            
+            Armadura armadura_comprada = new Armadura("Armadura Doce", "Raro", 10);
+    
+            p.setArmadura(armadura_comprada);
+            System.out.println(p.getNome() + " comprou " + armadura_comprada.getNome() + "e ganhou " + p.getDefesa() + " de defesa!");
+
             System.out.println("\n--------------------------------");
             System.out.println(p.getArmadura());
             System.out.println("--------------------------------");

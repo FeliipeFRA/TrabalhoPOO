@@ -18,7 +18,7 @@ public class Armadura extends Item {
 
     @Override
     public String toString() {
-        return super.toString() + " | Defesa: " + defesa;
+        return "Armadura: " + getNome() + " | Raridade: " + getRaridade() + " | Defesa: " + getDefesa();
     }
 }
 

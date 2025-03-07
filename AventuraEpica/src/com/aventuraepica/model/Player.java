@@ -4,8 +4,6 @@
 
 package com.aventuraepica.model;
 
-import com.aventuraepica.model.Armadura;
-
 public class Player extends Personagem {
     private int nivel;
     private Mochila mochila;
